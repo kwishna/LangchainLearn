@@ -29,3 +29,14 @@ multiple_input_prompt = PromptTemplate(
 )
 print(multiple_input_prompt.format(adjective="funny", content="chickens"))
 # -> "Tell me a funny joke about chickens."
+
+# ----------------------------------------------------
+
+template = "Tell me a {adjective} joke about {content}."
+
+prompt_template = PromptTemplate.from_template(template)
+print(prompt_template.input_variables)
+# -> ['adjective', 'content']
+
+prompt_template.format(adjective="funny", content="chickens")
+# -> Tell me a funny joke about chickens.
