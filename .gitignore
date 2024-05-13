@@ -2,3 +2,5 @@
 .env
 *.pkl
 *.bin
+*.db
+*.log
